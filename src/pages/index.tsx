@@ -1,9 +1,10 @@
-import Head from 'next/head'
+import Head from 'next/head';
+import SnackList from '../components/SnackList';
 
-const Home = () => {
+export default function Home() {
   return (
-    <h1>Hello</h1>
-  )
-}
-
-export default Home
+    <main>
+      <SnackList />
+    </main>
+  );
+};

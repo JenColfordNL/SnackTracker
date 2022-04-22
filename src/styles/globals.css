@@ -4,3 +4,221 @@
 
 @layer components {
 }
+
+:root {
+  /* snack colors */
+  --snack-brand: linear-gradient(90deg, rgb(74, 255, 74) 0%, rgb(152, 226, 146) 100%);
+  --snack-white: #fff;
+  --snack-black: #161a2b;
+  --snack-green: rgb(112, 240, 110);
+  --snack-blue: linear-gradient(90deg, rgba(20, 159, 255, 1) 0%, rgba(17, 122, 255, 1) 100%);
+  --snack-purple: #5d0cff;
+  --snack-red: red;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+body {
+  text-align: center;
+  background: var(--snack-brand);
+  overflow-x: hidden;
+}
+
+[class*='snack-'] {
+  background: var(--snack-black);
+}
+
+.snack-app {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  width: 520px;
+  min-height: 600px;
+  background: var(--snack-black);
+  margin: 56px auto;
+  border-radius: 10px;
+  padding-bottom: 32px;
+  overflow: hidden;
+}
+
+.snack-header {
+  margin: 1rem auto 0 auto;
+  color: var(--snack-white);
+  font-size: 24px;
+}
+
+.snack-form {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 32px;
+}
+
+.snack-form.edit {
+  margin-bottom: 0;
+}
+
+.snack-input {
+  padding: 14px 32px 14px 16px;
+  border-radius: 4px 0 0 4px;
+  border: 2px solid var(--snack-purple);
+  outline: none;
+  width: 320px;
+  background: var(--snack-black);
+  color: var(--snack-white);
+}
+
+.snack-input::placeholder {
+  color: #e2e2e2;
+}
+
+.snack-button {
+  padding: 16px;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  outline: none;
+  background: var(--snack-purple);
+  color: var(--snack-white);
+  text-transform: capitalize;
+}
+
+.snack-button.edit {
+  padding: 16px 22px;
+}
+
+.snack-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 4px auto;
+  padding: 6px;
+  border-radius: 5px;
+  width: 90%;
+  color: var(--snack-white);
+  background: var(--snack-blue);
+}
+
+.snack-row.eaten {
+  color: var(--snack-black);
+  background: var(--snack-brand);
+}
+
+.snack-row-text {
+  display: inline-flex;
+  background: transparent;
+  align-items: center;
+  cursor: pointer;
+  flex-grow: 4;
+  min-height: 32px;
+  overflow: hidden;
+}
+
+.snack-row-icons {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: 24px;
+  cursor: pointer;
+  margin-left: 10px;
+  background: transparent;
+}
+
+.snack-row-icons-delete {
+  color: var(--snack-white);
+  opacity: 50%;
+  background: transparent;
+  margin: 5px;
+}
+.snack-row-icons-delete:hover {
+  opacity: 100%;
+  color: var(--snack-red);
+
+  transition: all;
+  transition-duration: 150ms;
+  transition-timing-function: ease-out;
+  transform: scaleX(1.25) scaleY(1.25);
+}
+
+.snack-row-icons-edit {
+  color: var(--snack-black);
+  opacity: 50%;
+  background: transparent;
+  margin: 5px;
+}
+
+.snack-row-icons-edit:hover {
+  opacity: 100%;
+  color: var(--snack-purple);
+
+  transition: all;
+  transition-duration: 150ms;
+  transition-timing-function: ease-out;
+  transform: scaleX(1.25) scaleY(1.25);
+}
+
+.snack-row-icons-checkmark {
+  background: transparent;
+  color: var(--snack-black);
+  font-size: 28px;
+  cursor: default;
+}
+
+.progress-container {
+  background-color: rgb(243 244 246);
+  margin: 1rem auto;
+  width: 100%;
+  min-height: 100px;
+  max-width: 36rem;
+  padding: 1rem;
+}
+
+.progress-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+}
+
+.progressbar-icon-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.progress-icons {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: 36px;
+  margin-left: 10px;
+  background: transparent;
+}
+
+.progressbar-icon-star {
+  color: var(--snack-green);
+  opacity: 50%;
+  background: transparent;
+  margin: 5px;
+}
+
+.progressbar-outer {
+  height: 1rem;
+  width: 100%;
+  margin: 1rem 0;
+  background-color: rgb(229 231 235);
+  border-radius: 25px;
+}
+
+.progressbar-inner {
+  height: 100%;
+  background: var(--snack-brand);
+  border-radius: 25px;
+}
